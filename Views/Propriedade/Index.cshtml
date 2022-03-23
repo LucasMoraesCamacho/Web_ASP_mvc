@@ -1,0 +1,19 @@
+﻿@model Web_ASP_mvc.Models.Propriedade
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Propriedades</h2>
+
+<div>
+    <p>@Model.Name</p>
+    <p>@Model.Proprietary</p>
+    <p>@Model.CreationDate</p>
+</div>
+
+@{ 
+    var propriedade = ViewBag.Propriedade;
+    //var propriedade = ViewData["Propriedade"] as Propriedade;
+
+    <p><b>@propriedade.Name</b></p>
+}

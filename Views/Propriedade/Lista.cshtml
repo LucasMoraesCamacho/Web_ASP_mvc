@@ -1,0 +1,23 @@
+﻿@model List<Web_ASP_mvc.Models.Propriedade>
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2>Lista</h2>
+
+
+@foreach (var propriedade in Model)
+{
+    <li>@Html.DisplayFor(model => propriedade.Name)</li>
+}
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("li").click(function () {
+                $(this).hide();
+            });
+        });
+    </script>
+}
